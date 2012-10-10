@@ -1,0 +1,20 @@
+{
+	schema,
+		[
+		{version, "1.0"},
+		{default_field, "_id"},
+		{default_op, "and"},
+		{n_val, 3},
+		{analyzer_factory, {erlang, text_analyzers, noop_analyzer_factory}}
+	],
+		[
+		{field, [
+			{name, "_id"},
+			{analyzer_factory, {erlang, text_analyzers, noop_analyzer_factory}}
+			]},
+		{dynamic_field, [
+			{name, "*"},
+			{analyzer_factory, {erlang, text_analyzers, noop_analyzer_factory}}
+			]}
+	]
+}.	
